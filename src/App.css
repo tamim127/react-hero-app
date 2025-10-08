@@ -1,0 +1,17 @@
+.navText{
+    
+-webkit-background-clip:
+text;
+-webkit-text-fill-color:
+transparent;
+background-clip:
+text;
+
+font-size: 16px;
+font-weight: 600;
+line-height: 19px;
+letter-spacing: 0%;
+text-align: left;
+text-decoration-line: underline;
+text-transform: capitalize;
+}

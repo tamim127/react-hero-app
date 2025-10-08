@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.postimg.cc/FH4WGjzF/1200x630wa-8.png",
+    "title": "NoteMaster - Sleek Note-Taking App",
+    "companyName": "PixelWave Ltd.",
+    "description": "A sleek note-taking app with cloud sync, tags, and AI summaries.",
+    "size": 45,
+    "reviews": 1200,
+    "ratingAvg": 4.6,
+    "downloads": "5M",
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 50 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 600 }
+    ]
+  },
+  {
+    "id": 2,
+    "image": "https://i.postimg.cc/JzVcMMWt/8e270a27e139387f6f21bf6aab9743f5-icon.png",
+    "title": "FitTrack Pro - Your Fitness Companion",
+    "companyName": "HealthSync",
+    "description": "Track workouts, calories, and progress with an intuitive dashboard.",
+    "size": 80,
+    "reviews": 890,
+    "ratingAvg": 4.3,
+    "downloads": "3.5M",
+    "ratings": [
+      { "name": "1 star", "count": 25 },
+      { "name": "2 star", "count": 45 },
+      { "name": "3 star", "count": 110 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 410 }
+    ]
+  },
+  {
+    "id": 3,
+    "image": "https://i.postimg.cc/kXVf7T6W/unnamed-3.png",
+    "title": "TaskFlow - Organize Projects & Teams",
+    "companyName": "NovaSoft",
+    "description": "Organize projects, tasks, and teams visually with drag-and-drop.",
+    "size": 60,
+    "reviews": 2300,
+    "ratingAvg": 4.8,
+    "downloads": "12M",
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 70 },
+      { "name": "3 star", "count": 180 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 1510 }
+    ]
+  },
+  {
+    "id": 4,
+    "image": "https://i.postimg.cc/2y9c2Jqq/1200x630wa-7.png",
+    "title": "PhotoEase - AI Photo Editor",
+    "companyName": "Visionary Studio",
+    "description": "Edit photos easily with filters, AI touch-ups, and background remover.",
+    "size": 95,
+    "reviews": 3100,
+    "ratingAvg": 4.5,
+    "downloads":"20M",
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 140 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 800 },
+      { "name": "5 star", "count": 1760 }
+    ]
+  },
+  {
+    "id": 5,
+    "image": "https://i.postimg.cc/63rxb9wG/unnamed-2.png",
+    "title": "LangMate - Learn Languages with AI",
+    "companyName": "EduWorld",
+    "description": "Learn new languages through games, quizzes, and AI-based speaking tests.",
+    "size": 72,
+    "reviews": 1780,
+    "ratingAvg": 4.7,
+    "downloads": "9.8M",
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 1030 }
+    ]
+  },
+  {
+    "id": 6,
+    "image": "https://i.postimg.cc/x11jkbQ5/mindfulness-app-b-e8815479a4e3485cb2167673cf71f141.png",
+    "title": "MindCalm - Meditation & Focus App",
+    "companyName": "Zenify",
+    "description": "Meditation and sleep sounds app to relax your mind and improve focus.",
+    "size": 40,
+    "reviews": 2500,
+    "ratingAvg": 4.9,
+    "downloads": "8.5M",
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 700 },
+      { "name": "5 star", "count": 1590 }
+    ]
+  },
+  {
+    "id": 7,
+    "image": "https://i.postimg.cc/9Qm0GndB/1200x630wa-6.png",
+    "title": "FinanceHero - Expense & Budget Manager",
+    "companyName": "Budgetify Co.",
+    "description": "Manage expenses, budgets, and savings with detailed analytics.",
+    "size": 65,
+    "reviews": 1500,
+    "ratingAvg": 4.4,
+    "downloads": "6.7M",
+    "ratings": [
+      { "name": "1 star", "count": 60 },
+      { "name": "2 star", "count": 100 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 640 }
+    ]
+  },
+  {
+    "id": 8,
+    "image": "https://i.postimg.cc/J7HknvxV/1200x630wa-5.png",
+    "title": "RecipeCraft - Step-by-Step Cooking Guide",
+    "companyName": "Foodology",
+    "description": "Find and share delicious recipes with step-by-step video guides.",
+    "size": 85,
+    "reviews": 2100,
+    "ratingAvg": 4.5,
+    "downloads":"12.5M",
+    "ratings": [
+      { "name": "1 star", "count": 90 },
+      { "name": "2 star", "count": 100 },
+      { "name": "3 star", "count": 280 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 1030 }
+    ]
+  },
+  {
+    "id": 9,
+    "image": "https://i.postimg.cc/FF6YXpX2/tunebox.jpg",
+    "title": "TuneBox - Stream & Download Music",
+    "companyName": "SoundFlow Inc.",
+    "description": "Stream and download your favorite songs with personalized playlists.",
+    "size": 120,
+    "reviews": 4500,
+    "ratingAvg": 4.2,
+    "downloads":"32M",
+    "ratings": [
+      { "name": "1 star", "count": 400 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 900 },
+      { "name": "4 star", "count": 1200 },
+      { "name": "5 star", "count": 1500 }
+    ]
+  },
+  {
+    "id": 10,
+    "image": "https://i.postimg.cc/QCCKknGW/1200x630wa-4.png",
+    "title": "ChatNova - AI Chat Assistant",
+    "companyName": "Comet Labs",
+    "description": "AI-powered chatting assistant with smart suggestions and voice input.",
+    "size": 58,
+    "reviews": 3700,
+    "ratingAvg": 4.6,
+    "downloads": "16M",
+    "ratings": [
+      { "name": "1 star", "count": 60 },
+      { "name": "2 star", "count": 100 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 800 },
+      { "name": "5 star", "count": 2440 }
+    ]
+  },
+  {
+    "id": 11,
+    "image": "https://i.postimg.cc/d1BG9y7C/1200x630wa-3.png",
+    "title": "StudyPal - Smart Study Planner",
+    "companyName": "EduVerse",
+    "description": "Smart study planner with flashcards, reminders, and focus timer.",
+    "size": 64,
+    "reviews": 1980,
+    "ratingAvg": 4.7,
+    "downloads": "9M",
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 130 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 1260 }
+    ]
+  },
+  {
+    "id": 12,
+    "image": "https://i.postimg.cc/HsSBgfkT/unnamed-1.png",
+    "title": "CleanDroid - Optimize & Clean Phone",
+    "companyName": "TechGuard",
+    "description": "Optimize storage, boost RAM, and clean junk files instantly.",
+    "size": 30,
+    "reviews": 5000,
+    "ratingAvg": 4.1,
+    "downloads": "4M",
+    "ratings": [
+      { "name": "1 star", "count": 600 },
+      { "name": "2 star", "count": 800 },
+      { "name": "3 star", "count": 1000 },
+      { "name": "4 star", "count": 1200 },
+      { "name": "5 star", "count": 1400 }
+    ]
+  },
+  {
+    "id": 13,
+    "image": "https://i.postimg.cc/SKHPpHV7/R.png",
+    "title": "CodeSpace - Online IDE for Developers",
+    "companyName": "DevNexus",
+    "description": "Online IDE for web development with live preview and collaboration.",
+    "size": 110,
+    "reviews": 2500,
+    "ratingAvg": 4.8,
+    "downloads": "8M",
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 80 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 1580 }
+    ]
+  },
+  {
+    "id": 14,
+    "image": "https://i.postimg.cc/cJzpLv17/1200x630wa-2.png",
+    "title": "SafeVault - Password Manager & Vault",
+    "companyName": "LockSecure",
+    "description": "Password manager and file vault with AES-256 encryption.",
+    "size": 50,
+    "reviews": 1200,
+    "ratingAvg": 4.5,
+    "downloads":"7M",
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 590 }
+    ]
+  },
+  {
+    "id": 15,
+    "image": "https://i.postimg.cc/Vs0Ync2h/512x512bb.jpg",
+    "title": "WeatherPlus - Accurate Weather Forecasts",
+    "companyName": "ClimaTech",
+    "description": "Accurate weather forecasts with radar maps and live alerts.",
+    "size": 40,
+    "reviews": 2800,
+    "ratingAvg": 4.3,
+    "downloads": "20M",
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 160 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 700 },
+      { "name": "5 star", "count": 1540 }
+    ]
+  },
+  {
+    "id": 16,
+    "image": "https://i.postimg.cc/gkR2FPDR/1200x630wa-1.png",
+    "title": "TripGo - Plan Trips & Book Hotels",
+    "companyName": "GlobeXplore",
+    "description": "Plan trips, find attractions, and book hotels all in one app.",
+    "size": 88,
+    "reviews": 1900,
+    "ratingAvg": 4.6,
+    "downloads":"16M",
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 90 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 1060 }
+    ]
+  },
+  {
+    "id": 17,
+    "image": "https://i.postimg.cc/wTt95YZg/unnamed.png",
+    "title": "ShopMate - Smart Shopping App",
+    "companyName": "Retailify",
+    "description": "Smart shopping app for deals, discounts, and price tracking.",
+    "size": 78,
+    "reviews": 3200,
+    "ratingAvg": 4.4,
+    "downloads":"31M",
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 200 },
+      { "name": "3 star", "count": 400 },
+      { "name": "4 star", "count": 900 },
+      { "name": "5 star", "count": 1550 }
+    ]
+  },
+  {
+    "id": 18,
+    "image": "https://i.postimg.cc/rp71mkB6/screen-0.jpg",
+    "title": "StreamGo - HD Live TV & Movies",
+    "companyName": "VisionPlay",
+    "description": "Watch live TV, movies, and shows on demand with HD streaming.",
+    "size": 130,
+    "reviews": 4100,
+    "ratingAvg": 4.2,
+    "downloads":"50M",
+    "ratings": [
+      { "name": "1 star", "count": 400 },
+      { "name": "2 star", "count": 600 },
+      { "name": "3 star", "count": 800 },
+      { "name": "4 star", "count": 1100 },
+      { "name": "5 star", "count": 1200 }
+    ]
+  },
+  {
+    "id": 19,
+    "image": "https://i.postimg.cc/HxfBf5Y3/readwise-reader-2023-01-05.jpg",
+    "title": "ReadWise - Highlight & Organize Books",
+    "companyName": "Bookify",
+    "description": "Read, highlight, and organize your favorite books and articles.",
+    "size": 55,
+    "reviews": 1700,
+    "ratingAvg": 4.7,
+    "downloads": "9M",
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 70 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 940 }
+    ]
+  },
+  {
+    "id": 20,
+    "image": "https://i.postimg.cc/wMyQ2BDQ/1200x630wa.png",
+    "title": "TimeBuddy - Focus Timer for Study",
+    "companyName": "Prodify",
+    "description": "Focus timer and productivity tracker based on Pomodoro technique.",
+    "size": 42,
+    "reviews": 1400,
+    "ratingAvg": 4.8,
+    "downloads":"8M",
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 840 }
+    ]
+  }
+]
