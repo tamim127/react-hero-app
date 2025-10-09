@@ -1,18 +1,14 @@
 import React from "react";
-
 import logo from "../../assets/logo.png";
 import { Link, NavLink } from "react-router";
 import githubIcon from '../../assets/github.png'
-
 const Navbar = () => {
   const linkClass =
     "mr-4 font-semibold transition-all duration-200  border-transparent hover:text-transparent hover:bg-clip-text hover:bg-[linear-gradient(125.07deg,rgba(99,46,227,1),rgba(159,98,242,1)_100%)]";
-
   const activeClass =
     "text-transparent bg-clip-text border-b-2 bg-[linear-gradient(125.07deg,rgba(99,46,227,1),rgba(159,98,242,1)_100%)] border-[rgba(99,46,227,1)]";
-
   return (
-    <div className="navbar bg-base-100 shadow-sm px-5 md:px-[80px]">
+    <div className="navbar poppins bg-base-100 shadow-sm px-5 md:px-[80px]">
       {/* Navbar Start */}
       <div className="navbar-start">
         <div className="dropdown">
@@ -32,7 +28,6 @@ const Navbar = () => {
               />
             </svg>
           </div>
-
           {/* Mobile Menu */}
           <ul
             tabIndex={0}
@@ -70,15 +65,11 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-
-        {/* Logo */}
-        <img src={logo} alt="Logo" className="w-10 h-10 mr-2" />
-        <Link to="/" className="font-bold text-xl">
+        <img src={logo} alt="Logo" className=" w-5 h-5  md:w-10 md:h-10 mr-2" />
+        <Link to="/" className="font-bold text-xl md:text-2xl bg-clip-text text-transparent bg-[linear-gradient(125.07deg,rgba(99,46,227,1),rgba(159,98,242,1)_100%)] ">
           HERO.IO
         </Link>
       </div>
-
-      {/* Navbar Center */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
@@ -113,12 +104,10 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-
-      {/* Navbar End */}
       <div className="navbar-end">
         <Link to='https://github.com/tamim127' className="btn bg-[linear-gradient(125.07deg,rgba(99,46,227,1),rgba(159,98,242,1)_100%)] text-white border-none hover:opacity-90">
           <div className="flex items-center gap-2">
-            <img src={githubIcon} alt="" />
+           <img src={githubIcon} alt="" />
             <p>Contribute</p>
           </div>
         </Link>

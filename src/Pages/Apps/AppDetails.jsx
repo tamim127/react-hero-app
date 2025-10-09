@@ -1,52 +1,127 @@
-import React from 'react';
-import { Link } from 'react-router';
-import demoImg2 from '../../assets/demo-app (2).webp'
-import downloadIcon from '../../assets/icon-downloads.png'
-import ratingImg from '../../assets/icon-ratings.png'
-import reviewImg from '../../assets/icon-review.png'
-
-
-
+import React, { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router';
+import downloadIcon from '../../assets/icon-downloads.png';
+import ratingImg from '../../assets/icon-ratings.png';
+import reviewImg from '../../assets/icon-review.png';
+import useApps from '../../Hook/useApps';
+import AppError from './AppError';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import {
+    BarChart,
+    Bar,
+    XAxis,
+    YAxis,
+    CartesianGrid,
+    Tooltip,
+    ResponsiveContainer,
+    LabelList,
+} from 'recharts';
+import LoadingSpinner from '../../Components/Navbar/LoadingSpinner/LoadingSpinner';
 const AppDetails = () => {
+    const { id } = useParams();
+    const { apps, loading } = useApps();
+    const [isInstalled, setIsInstalled] = useState(false);
+    const app = apps.find((a) => String(a.id) === id);
+    useEffect(() => {
+        const existingData = JSON.parse(localStorage.getItem('install')) || [];
+        const installed = existingData.some((a) => a.id === parseInt(id));
+        setIsInstalled(installed);
+    }, [id]);
+    if (loading) return <LoadingSpinner />;
+    if (!app) return <AppError />;
+    const handleAddToInstall = () => {
+        const existingData = JSON.parse(localStorage.getItem('install')) || [];
+        const isDuplicate = existingData.some((a) => a.id === app.id);
+        if (isDuplicate) {
+            toast.error(`${app.title} is already installed`);
+            return;
+        }
+        const updatedData = [...existingData, app];
+        localStorage.setItem('install', JSON.stringify(updatedData));
+        toast.success(`${app.title} installed successfully`);
+        setIsInstalled(true);
+    };
+    const ratingData = app.ratings.map((r) => ({
+        name: r.name,
+        count: r.count,
+    }));
     return (
         <section>
-        <div className='flex justify-start items-center gap-[40px] border-b-2 border-gray-300 pb-5 my-[50px]'>
-            <div>
-                <img src={demoImg2} alt="" />
-            </div>
-            <div className='space-y-2'>
-                <div className='border-b-2 border-gray-300  pb-3'>
-                    <h1 className='font-bold text-[32px]'>SmPlan:ToDo List with Reminder</h1>
-                    <p className='text-[20px]'>productive.io</p>
+            <div className="flex flex-col md:flex-row justify-start items-start md:items-center gap-8 border-b-2 border-gray-300 pb-5 mt-12">
+                <div className="w-full md:w-1/4">
+                    <img
+                        className="w-full h-auto rounded-lg object-cover"
+                        src={app.image}
+                        alt={app.title}
+                    />
                 </div>
-                <div className='flex  items-center  gap-4'>
-                    <div>
-                        <img className='w-[30px] h-[30px]' src={downloadIcon} alt="" />
-                        <p className='text-[#001931] mt-1'>Download</p>
-                        <h1 className='font-bold text-[40px]'>8M</h1>
+                <div className="w-full md:w-2/3 space-y-4">
+                    <div className="border-b-2 border-gray-300 pb-3">
+                        <h1 className="font-bold poppins text-2xl md:text-4xl">{app.title}</h1>
+                        <p className="text-base inter mt-2 md:text-xl text-gray-600">Developed by <span className='bg-clip-text text-transparent bg-[linear-gradient(125.07deg,rgba(99,46,227,1),rgba(159,98,242,1)_100%)]'>{app.companyName}.</span> </p>
+                    </div>
+                    <div className="flex inter flex-row sm:flex-row items-start sm:items-center gap-5">
+                        <div className='flex flex-col justify-center items-center text-center space-y-2'>
+                            <img className="w-8 h-8" src={downloadIcon} alt="Downloads" />
+                            <p className="text-sm sm:text-base text-[#001931]">Downloads</p>
+                            <h1 className="font-bold text-xl sm:text-3xl">{app.downloads}</h1>
                         </div>
-                    <div>
-                        <img className='w-[30px] h-[30px]' src={ratingImg} alt="" />
-                        <p className='text-[#001931] mt-1'>Average Ratings</p>
-                        <h1 className='font-bold text-[40px]'>4.9</h1>
+                        <div className='flex flex-col justify-center items-center text-center space-y-2'>
+                            <img className="w-8 h-8" src={ratingImg} alt="Rating" />
+                            <p className="text-sm sm:text-base text-[#001931]">Average Rating</p>
+                            <h1 className="font-bold text-xl sm:text-3xl">{app.ratingAvg}</h1>
+                        </div>
+                        <div className='flex flex-col justify-center items-center text-center space-y-2'>
+                            <img className="w-8 h-8" src={reviewImg} alt="Reviews" />
+                            <p className="text-sm sm:text-base text-[#001931]">Total Reviews</p>
+                            <h1 className="font-bold text-xl sm:text-3xl">{app.reviews}</h1>
+                        </div>
                     </div>
-                    <div>
-                        <img className='w-[30px] h-[30px]' src={reviewImg} alt="" />
-                        <p className='text-[#001931] mt-1'>Total Reviews</p>
-                        <h1 className='font-bold text-[40px]'>54K</h1>
-                    </div>
+                    <button
+                        onClick={handleAddToInstall}
+                        disabled={isInstalled}
+                        className={`btn  w-full sm:w-auto p-2 text-white rounded-md transition ${isInstalled
+                            ? 'bg-gray-400 cursor-not-allowed'
+                            : 'bg-[#00d390] skeleton hover:bg-[#00b578]'
+                            }`} >
+                        {isInstalled ? 'Installed' : `Install Now (${app.size} MB)`}
+                    </button>
                 </div>
-                <Link to='' className='btn text-white p-2 bg-[#00d390]'>Install Now (291 MB)</Link>
             </div>
-        </div>
-        <div className='my-5 border-b-2 border-gray-300 '>
-            <h3  className='font-bold text-2xl mb-4'>Rating</h3>
+            <div className="my-4 text-center">
+        <Link
+          className="inline-block  px-6 py-3 rounded-lg bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold skeleton shadow-md hover:opacity-90 transition"
+          to="/installation"
+        >
+         View Installed Apps
+        </Link>
+      </div>
 
-        </div>
-        <div className='my-5'>
-            <h3 className='font-bold text-2xl mb-4 text-justify'>Description</h3>
-            <p>This focus app takes the proven Pomodoro technique and makes it even more practical for modern lifestyles. Instead of just setting a timer, it builds a complete environment for deep work, minimizing distractions and maximizing concentration. Users can create custom work and break intervals, track how many sessions they complete each day, and review detailed statistics about their focus habits over time. The design is minimal and calming, reducing cognitive load so you can focus entirely on the task at hand. Notifications gently let you know when to pause and when to resume, helping you maintain a healthy rhythm between work and rest. A unique feature of this app is the integration of task lists with timers. You can assign each task to a specific Pomodoro session, making your schedule more structured. The built-in analytics show not only how much time you’ve worked but also which tasks consumed the most energy. This allows you to reflect on your efficiency and adjust your workflow accordingly. The app also includes optional background sounds such as white noise, nature sounds, or instrumental music to create a distraction-free atmosphere. For people who struggle with procrastination, the app provides motivational streaks and achievements. Completing multiple Pomodoro sessions unlocks milestones, giving a sense of accomplishment. This gamified approach makes focusing more engaging and less like a chore. Whether you’re studying for exams, coding, writing, or handling office work, the app adapts to your routine. By combining focus tracking, task management, and motivational tools, this Pomodoro app ensures that you not only work harder but also smarter. It is a personal trainer for your brain, keeping you disciplined, refreshed, and productive throughout the day.</p>
-        </div>
+            {/* --- Ratings Section --- */}
+            <div className="mt-10 inter border-b-2 border-gray-300 pb-6">
+                <h3 className="font-bold text-2xl mb-4">Ratings</h3>
+                <ResponsiveContainer width="100%" height={300}>
+                    <BarChart
+                        data={[...ratingData].sort((a, b) => a.name - b.name)}
+                        layout="vertical"
+                        margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis type="number" />
+                        <YAxis dataKey="name" type="category" reversed />
+                        <Tooltip />
+                        <Bar dataKey="count" fill="#ff8c00" barSize={25} radius={[4, 4, 4, 4]}>
+                            <LabelList dataKey="count" position="right" />
+                        </Bar>
+                    </BarChart>
+                </ResponsiveContainer>
+            </div>
+            {/* --- Description Section --- */}
+            <div className="my-5">
+                <h3 className="font-bold poppins text-2xl mb-4 text-justify">Description</h3>
+                <p className="text-justify inter text-gray-700 leading-relaxed">{app.description}</p>
+            </div>
+            <ToastContainer position="top-center" autoClose={2000} />
         </section>
     );
 };
